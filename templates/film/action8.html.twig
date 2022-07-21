@@ -1,0 +1,65 @@
+{% extends 'cineland.html.twig' %}
+
+{% block title %}Liste des films!{% endblock %}
+
+{% block body %}
+<div class="example-wrapper">
+    
+</div>
+<div class="example-wrapper">
+
+<table class="table"   style="margin : auto;" > 
+    <thead> 
+        <tr> 
+            <th scope="col">Titre</th> 
+            <th scope="col">Duree</th>
+            <th scope="col">Date de sortie</th>
+            <th scope="col">Note</th>
+            <th scope="col">Âge minimal</th>  
+            <th scope="col">Genre</th> 
+        </tr> 
+    </thead> 
+        {%  set taille = '180px' %} 
+        {% for film in films %} 
+            <tr> 
+                <td> 
+                {{ film.titre }} 
+                </td> 
+                <td> 
+                {{ film.duree }}m 
+                </td> 
+                <td> 
+                {{ film.dateSortie|date("m/d/Y") }} 
+                </td> 
+               <td> 
+                {{ film.note }} /20
+                </td> 
+                <td> 
+                {{ film.ageMinimal }} 
+                </td> 
+               <td> 
+                {{ film.genre }} 
+                </td>
+               
+            </tr> 
+        {% endfor %} 
+    </table>
+    <ul>
+        <li><code>Liste de tous les films<a href=" {{path('action8')}} ">action8 </a></code></li>
+        <li><code>Les détails d’un film donné<a href=" {{path('action9', {"id": 2})}} ">action9 </a></code></li>
+        <li><code>Ajouter un film<a href=" {{path('action10')}} ">action10 </a></code></li>
+        <li><code>Modifier un film<a href=" {{path('action12')}} ">action12 </a></code></li>
+        <li><code>Supprimer un film<a href=" {{path('action13')}} ">action13 </a></code></li>
+        <li><code>Liste des films dont la date de sortie est comprise entre deux années données<a href=" {{path('action14')}} ">action14 </a></code></li>
+        <li><code>Listes des acteurs ayant joué dans un film donné<a href=" {{path('action15')}} ">action15 </a></code></li>
+        <li><code>Modifier un film<a href=" {{path('action12')}} ">action12 </a></code></li>
+        <li><code>Listes des acteurs ayant joué dans un film donné<a href=" {{path('action15')}} ">action15 </a></code></li>
+        <li><code> Augmenter ou diminuer la note d’un film<a href=" {{path('action23')}} ">action23 </a></code></li>
+        <li><code> Rechercher des films via une partie de titre<a href=" {{path('action25')}} ">action25 </a></code></li>
+        <li><code>Augmenter l’âge minimal de tous les films dans lesquels à jouer un acteur donné<a href=" {{path('action26')}} ">action26 </a></code></li>
+
+       
+    </ul>
+	
+</div>
+{% endblock %}

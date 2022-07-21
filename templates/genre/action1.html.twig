@@ -1,0 +1,32 @@
+{% extends 'cineland.html.twig' %}
+
+{% block title %}Liste des genres!{% endblock %}
+
+{% block body %}
+<div class="example-wrapper">
+    
+    <table class="table"   style="margin : auto;" > 
+    <thead> 
+        <tr> 
+            <th scope="col">Nom</th> 
+        </tr> 
+    </thead> 
+        {%  set taille = '180px' %} 
+        {% for genre in genres %} 
+            <tr> 
+                <td> 
+                {{ genre.nom }} 
+                </td> 
+               
+            </tr> 
+        {% endfor %} 
+    </table>
+
+    <h3>Les autres actions sur les genres</h3>
+    <ul>
+        <li>Ajouter un genre <code><a href=" {{path('action2')}} ">action2 </a></code></li>
+        <li>Supprimer un genre seulement si aucun film ne s’y rapporte <code><a href="#">action2 </a></code></li>
+        
+    </ul>
+</div>
+{% endblock %}

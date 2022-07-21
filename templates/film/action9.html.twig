@@ -1,0 +1,51 @@
+{% extends 'cineland.html.twig' %}
+{% block title %}Les détails d’un film donné {% endblock %}
+    {% block body %}
+    <table class="table"   style="margin : auto;" > 
+    <thead> 
+        <tr> 
+            <th scope="col">Tidre</th> 
+            <th scope="col">Durée</th>
+            <th scope="col">Date de sortie</th>
+            <th scope="col">Note</th>
+            <th scope="col">Âge minimal</th>
+            <th scope="col">Genre</th>
+
+        </tr> 
+    </thead> 
+        {%  set taille = '180px' %} 
+        {% for acteurs in film.acteurs %} 
+     
+            <tr> 
+                <td> 
+                {{ film.titre }} 
+                </td> 
+                 <td> 
+                {{ film.duree }}m
+                </td> 
+                 <td> 
+                {{ film.dateSortie|date("m/d/y") }} 
+                </td>
+                <td> {{ film.note }}/20 
+                </td>
+                <td>
+                    {{ film.ageMinimal }}
+                </td> 
+                <td>
+                    {{ film.genre }}
+                </td>
+               
+            </tr> 
+        {% endfor %} 
+    </table>
+    </p>
+    <p>Joué dans:</p>
+    {% for film in film.acteurs %} 
+            <ul> {{ film.nomPrenom }} </ul>
+        {% endfor %} 
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p><br></p>
+        <p style="text-align: center;"><mark>Nb: par defaut c'est l'id 2 <br>Changer l'id dans la route /id.</mark> </p>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'cineland.html.twig' %}
+{% block title %}Liste des acteurs!{% endblock %}
+    {% block body %}
+	<p>
+		<table class="table"   style="margin : auto;" > 
+    <thead> 
+        <tr> 
+            <th scope="col">Nom prenom</th> 
+            <th scope="col">Date de naissance</th>
+            <th scope="col">Nationalité</th>
+
+        </tr> 
+    </thead> 
+        {%  set taille = '180px' %} 
+        {% for film in film %} 
+            <tr> 
+                <td> 
+                {{ acteur.nomPrenom }} 
+                </td> 
+                 <td> 
+                {{ acteur.dateNaissance|date("m/d/Y") }} 
+                </td> 
+                 <td> 
+                {{ acteur.nationalite }} 
+                </td>
+                <td></td> 
+               
+            </tr> 
+        {% endfor %} 
+    </table>
+	</p>
+	<p><b>Joué dans :</p>
+	{% for acteur in acteur.film %} 
+            <ul> {{ acteur.titre }} </ul>
+        {% endfor %}
+        <p> </p>
+         <p> </p>
+         <p style="text-align: center;"><mark>Nb: par defaut c'est l'id 1 <br>Changer l'id dans le route si vous voulez les détails d'un autre acteur.</mark> </p> 
+{% endblock %}

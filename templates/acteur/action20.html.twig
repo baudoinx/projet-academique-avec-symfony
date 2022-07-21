@@ -1,0 +1,33 @@
+
+{% extends 'cineland.html.twig' %}
+
+{% block title %}la durée en minutes de tous les films joués par un acteur donné{% endblock %}
+{% block body %}
+<table class="table"   style="margin : auto;" > 
+    <thead> 
+        <tr> 
+            <th scope="col">Acteur</th> 
+            <th scope="col">Film</th>
+            <th scope="col">Date de sortie</th>
+             
+        </tr> 
+    </thead> 
+        {%  set taille = '180px' %}
+        <td>
+        
+        </td> 
+        {% for film in films %} 
+            <tr> 
+                <td> 
+                {{ film.titre }} 
+                </td> 
+                <td> 
+                {% endfor %}
+               
+               
+            </tr>
+         
+    </table> 
+
+    <p style="text-align: center;"><mark>>>>pas terminer<br></mark> </p>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'cineland.html.twig' %}
+
+{% block title %}Liste des acteurs!{% endblock %}
+
+{% block body %}
+<div class="example-wrapper">
+    <h1>Liste des acteurs  ✅</h1>
+    <table class="table"   style="margin : auto;" > 
+    <thead> 
+        <tr> 
+            <th scope="col">Nom Prenom</th> 
+            <th scope="col">Date de naissance</th>
+            <th scope="col">Nationalité</th>
+        </tr> 
+    </thead> 
+        {%  set taille = '180px' %} 
+        {% for acteur in acteurs %} 
+            <tr> 
+                <td> 
+                {{ acteur.nomPrenom }} 
+                </td> 
+                <td> 
+                {{ acteur.dateNaissance|date("m/d/Y") }} 
+                </td> 
+               <td> 
+                {{ acteur.nationalite }} 
+                </td> 
+               
+               
+            </tr> 
+        {% endfor %} 
+    </table>
+
+    This friendly message is coming from:
+    <ul>
+        <li><code>Liste tous les acteurs<a href=" {{path('action3')}} ">action3 </a></code></li>
+        <li><code>Détails d’un acteur donné<a href=" {{ path('action4',{"id": 1}) }} ">action4 </a></code></li>
+        <li><code>Ajouter un acteur<a href=" {{path('action5')}} ">action5</a></code></li>
+        <li><code>Modifier un acteur<a href=" {{path('action6',{"id": 1})}} ">action6 </a></code></li>
+        <li><code>Supprimer un acteur<a href=" {{path('action7')}} ">action7</a></code></li>
+        <li><code>Liste les acteurs ayant joué dans au moins 3 films différents<a href=" {{path('action16')}} ">action16</a></code></li>
+        <li><code>Liste des genres pour lesquels un acteur donné a joué au moins 2 films<a href=" {{path('action18')}} ">action18</a></code></li>
+        <li><code>la durée en minutes de tous les films joués par un acteur donné<a href=" {{path('action19')}} ">action19</a></code></li>
+        <li><code>Pour chaque acteur la liste des films dans lesquels il a joué dans l’ordre chronologique:<a href=" {{path('action20')}} ">action20</a></code></li>
+        <li><code>Pour chaque acteur la liste des genres dans lesquels il a joué au moins un film.<a href=" {{path('action21')}} ">action21</a></code></li>
+
+    </ul>
+</div>
+{% endblock %}

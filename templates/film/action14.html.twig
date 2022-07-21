@@ -1,0 +1,12 @@
+{% extends 'cineland.html.twig' %}
+{% block title %}films antérieur à :{% endblock %} 
+ 
+{% block body %}
+	<div class="d-flex justify-content-center"> 
+	<h3>Les films dont la date de sortie est antérieure à une certaine date précise donnée</h3>
+    <form action="", method="post">
+    	<input type="date", name="dated">
+    	<button type="submit">Rechercher</button>
+    </form> 
+    </div>
+{% endblock %}

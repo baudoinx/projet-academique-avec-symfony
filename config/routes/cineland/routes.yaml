@@ -1,0 +1,111 @@
+init:
+    path: /init
+    controller: App\Controller\CinelandController::init
+cineland_accueil:
+    path: /accueil
+    controller: App\Controller\CinelandController::accueil
+
+action1:
+    path: /action1
+    controller: App\Controller\GenreController::action1
+
+action2:
+    path: /action2
+    controller: App\Controller\GenreController::action2
+
+action3:
+    path: /action3
+    controller: App\Controller\ActeurController::action3
+
+action4:
+    path: /action4/{id}
+    controller: App\Controller\ActeurController::action4
+
+action5:
+    path: /action5
+    controller: App\Controller\ActeurController::action5
+
+action6:
+    path: /action6/{id}
+    controller: App\Controller\ActeurController::action6
+
+action7:
+    path: /action7
+    controller: App\Controller\ActeurController::action7
+
+action8:
+    path: /action8
+    controller: App\Controller\FilmController::action8
+
+action9:
+    path: /action9/{id}
+    controller: App\Controller\FilmController::action9
+
+action10:
+    path: /action10
+    controller: App\Controller\FilmController::action10
+
+action11:
+    path: /action11/{id}
+    controller: App\Controller\FilmController::action11
+
+action12:
+    path: /action12
+    controller: App\Controller\FilmController::action12
+
+action13:
+    path: /action13
+    controller: App\Controller\FilmController::action13
+
+action14:
+    path: /action14
+    controller: App\Controller\FilmController::action14
+
+action15:
+    path: /action15
+    controller: App\Controller\FilmController::action15
+
+action16:
+    path: /action16
+    controller: App\Controller\ActeurController::action16
+
+action17:
+    path: /action17
+    controller: App\Controller\FilmController::action17
+
+action18:
+    path: /action18
+    controller: App\Controller\ActeurController::action18
+
+action19:
+    path: /action19
+    controller: App\Controller\ActeurController::action19
+
+
+action20:
+    path: /action20
+    controller: App\Controller\ActeurController::action20
+
+action21:
+    path: /action21
+    controller: App\Controller\ActeurController::action21
+
+action22:
+    path: /action22
+    controller: App\Controller\FilmController::action22
+
+action23:
+    path: /action23
+    controller: App\Controller\FilmController::action23
+
+action24:
+    path: /action24
+    controller: App\Controller\GenreController::action24
+
+action25:
+    path: /action25
+    controller: App\Controller\FilmController::action25
+
+action26:
+    path: /action26
+    controller: App\Controller\FilmController::action26

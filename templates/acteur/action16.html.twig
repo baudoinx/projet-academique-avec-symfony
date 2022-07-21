@@ -1,0 +1,15 @@
+{% extends 'cineLand.html.twig' %}
+{% block title %}les acteurs ayant joué dans au moins 3 films{% endblock %} 
+ 
+{% block body %} 
+	<h3>les acteurs ayant joué dans au moins 3 films différents :</h3>
+	{% for acteurs in acteurs %}
+		<ul>
+			<li> {{ acteurs.nomPrenom }} </li>
+		</ul>
+
+	{% endfor %}
+	
+	
+     
+{% endblock %}

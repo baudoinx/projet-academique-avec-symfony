@@ -1,0 +1,14 @@
+{% extends 'cineland.html.twig' %}
+{% block title %}films antérieur à :{% endblock %} 
+ 
+{% block body %} 
+	<h3>Les acteurs ayant joué dans le film :</h3>
+	{{ film.titre }} 
+	<h4>sont :</h4>
+	{% for acteurs in acteurs %}
+		<ul>
+			<li> {{ acteurs.nomPrenom }} </li>
+		</ul>
+	{% endfor %}
+     
+{% endblock %}
